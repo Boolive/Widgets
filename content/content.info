@@ -1,0 +1,13 @@
+{
+    "proto": "/vendor/boolive/basic/widget_auto",
+    "properties": {
+        "title": "Содержимое",
+        "description": "Универсальный виджет для отображения содержимого (страниц, разделов, каталогов). ",
+        "res": {
+            "proto": "/vendor/boolive/basic/widget_auto/res"
+        },
+        "views": {
+            "proto": "/vendor/boolive/basic/widget_auto/views"
+        }
+    }
+}

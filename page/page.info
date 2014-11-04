@@ -1,0 +1,10 @@
+{
+    "proto": "/vendor/boolive/basic/widget",
+    "is_default_logic": false,
+    "value": "page.tpl",
+    "is_file": true,
+    "properties": {
+        "title": "Виджет страницы",
+        "description": "Отображает свойства страницы"
+    }
+}
