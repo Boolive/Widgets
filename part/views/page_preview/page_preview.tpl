@@ -1,7 +1,7 @@
 <div class="widget page_preview">
-    <h1>Страница</h1>
+    <h2><?=$v['title']?></h2>
     <div class="page_preview__text">
-        Сокращенный текст
+        <?=$v['text']?>
     </div>
-    <a href="#">Продолжение</a>
+    <a href="<?=$v['url']?>">Продолжение</a>
 </div>

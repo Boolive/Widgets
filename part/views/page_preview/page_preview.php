@@ -4,7 +4,7 @@
  * @aurhor Vladimir Shestakov
  * @version 1.0
  */
-namespace boolive\widgets\page_preview;
+namespace boolive\widgets\part\views\page_preview;
 
 use boolive\basic\widget\widget;
 use boolive\core\request\Request;
@@ -26,6 +26,7 @@ class page_preview extends widget
         $page = $request['REQUEST']['object'];
         $v['title'] = $page->title->value();
         $v['text'] = $page->text->value();
+        $v['url'] = Request::url($page->uri());
         return parent::show($v, $request);
     }
 } 
