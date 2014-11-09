@@ -26,6 +26,13 @@ class page_preview extends widget
         $page = $request['REQUEST']['object'];
         $v['title'] = $page->title->value();
         $v['text'] = $page->text->value();
+        //
+        if (($split_pos = mb_strpos($v['text'],'<a class="more"> </a>')) ||
+            ($split_pos = mb_strpos($v['text'],'<!--more-->'))){
+            $v['text'] = mb_substr($v['text'], 0, $split_pos);
+        }
+        //
+
         $v['url'] = Request::url($page->uri());
         return parent::show($v, $request);
     }
