@@ -26,6 +26,7 @@ class part extends widget_autolist
         $part = $request['REQUEST']['object'];
         $v['title'] = $part->title->value();
 //        $v['text'] = $page->text->value();
+        $v['page_numbering'] = $this->page_numbering->linked()->start($request);
         return parent::show($v, $request);
     }
 } 

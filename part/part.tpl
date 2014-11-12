@@ -6,4 +6,5 @@
         echo $item;
     }
 ?>
+    <?=$v['page_numbering']->string()?>
 </div>
