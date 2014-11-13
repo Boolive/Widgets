@@ -7,6 +7,7 @@
 namespace boolive\widgets\part;
 
 use boolive\basic\widget_autolist\widget_autolist;
+use boolive\core\data\Data;
 use boolive\core\request\Request;
 use boolive\core\values\Rule;
 
@@ -17,6 +18,7 @@ class part extends widget_autolist
         return Rule::arrays([
             'REQUEST' => Rule::arrays([
                 'object' => Rule::entity(['is','/vendor/boolive/basic/part'])->required(),
+                'page'=> Rule::int()->default(1)->required() // номер страницы
             ])
         ]);
     }
@@ -28,5 +30,25 @@ class part extends widget_autolist
 //        $v['text'] = $page->text->value();
         $v['page_numbering'] = $this->page_numbering->linked()->start($request);
         return parent::show($v, $request);
+    }
+
+    function getList(Request $request, $cond = [])
+    {
+        $count_per_page = $this->count_per_page->is_exists()? max(1, $this->count_per_page->value()) : 10;
+        $cond['limit'] = [
+            ($request['REQUEST']['page'] - 1) * $count_per_page,
+            $count_per_page
+        ];
+        $result = parent::getList($request, $cond);
+
+        if (count($result) < $count_per_page){
+            $count = $request['REQUEST']['page'];
+        }else{
+            $count = 5;/*ceil(Data::find(Data::unionCond([
+                'calc' => 'count'
+            ],$cond)) / $count_per_page);*/
+        }
+        $request->mix(['REQUEST' => ['page_count' => $count]]);
+        return $result;
     }
 } 
