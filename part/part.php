@@ -28,6 +28,7 @@ class part extends widget_autolist
         $part = $request['REQUEST']['object'];
         $v['title'] = $part->title->value();
 //        $v['text'] = $page->text->value();
+        $v['list'] = $this->getList($request);
         $v['page_numbering'] = $this->page_numbering->linked()->start($request);
         return parent::show($v, $request);
     }
@@ -44,9 +45,9 @@ class part extends widget_autolist
         if (count($result) < $count_per_page){
             $count = $request['REQUEST']['page'];
         }else{
-            $count = 5;/*ceil(Data::find(Data::unionCond([
+            $count = ceil(Data::find(Data::unionCond([
                 'calc' => 'count'
-            ],$cond)) / $count_per_page);*/
+            ],$cond)) / $count_per_page);
         }
         $request->mix(['REQUEST' => ['page_count' => $count]]);
         return $result;
