@@ -33,7 +33,7 @@ class part extends widget_autolist
         return parent::show($v, $request);
     }
 
-    function getList(Request $request, $cond = [])
+    function getList(Request $request, &$cond = [])
     {
         $count_per_page = $this->count_per_page->is_exists()? max(1, $this->count_per_page->value()) : 10;
         $cond['limit'] = [

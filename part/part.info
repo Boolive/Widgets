@@ -7,6 +7,9 @@
         "description": "Отображает список подчиненного содержимого",
         "views": {
             "proto": "/vendor/boolive/basic/widget_autolist/views"
+        },
+        "count_per_page": {
+            "value": 10
         }
     }
 }
