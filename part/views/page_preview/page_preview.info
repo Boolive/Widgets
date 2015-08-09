@@ -1,9 +1,0 @@
-{
-    "proto": "/vendor/boolive/basic/widget",
-    "logic": true,
-    "file": "page_preview.tpl",
-    "properties": {
-        "title": "Виджет предпрсмотра страницы",
-        "description": "Отображает укокроченную версию страницу. Используется, например, в лентах"
-    }
-}

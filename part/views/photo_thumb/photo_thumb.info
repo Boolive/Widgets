@@ -1,9 +1,0 @@
-{
-    "proto": "/vendor/boolive/basic/widget",
-    "logic": true,
-    "file": "photo_thumb.tpl",
-    "properties": {
-        "title": "Виджет миниатюры фотографии",
-        "description": "Отображает фотографию в уменьшенном размере"
-    }
-}
