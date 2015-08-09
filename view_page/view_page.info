@@ -1,0 +1,36 @@
+{
+    "proto": "/vendor/boolive/basic/widget_autolist",
+    "order": 0,
+    "file": "view_page.tpl",
+    "logic": true,
+    "properties": {
+        "title": {
+            "proto": "/vendor/boolive/basic/widget_autolist/title",
+            "order": 0,
+            "value": "Виджет страницы"
+        },
+        "description": {
+            "proto": "/vendor/boolive/basic/widget_autolist/description",
+            "order": 0,
+            "value": "Отображает свойства страницы"
+        },
+        "views": {
+            "proto": "/vendor/boolive/basic/widget_autolist/views",
+            "is_mandatory": true,
+            "properties": {
+                "start_all": {
+                    "proto": "/vendor/boolive/basic/widget_autolist/views/start_all"
+                },
+                "description": {
+                    "proto": "/vendor/boolive/basic/widget_autolist/views/description"
+                },
+                "title": {
+                    "proto": "/vendor/boolive/basic/widget_autolist/views/title"
+                }
+            }
+        },
+        "res": {
+            "proto": "/vendor/boolive/basic/widget_autolist/res"
+        }
+    }
+}
