@@ -1,17 +1,17 @@
 <?php
 /**
- * part
+ * View part
  * @aurhor Vladimir Shestakov
  * @version 1.0
  */
-namespace boolive\widgets\part;
+namespace boolive\widgets\view_part;
 
 use boolive\basic\widget_autolist\widget_autolist;
 use boolive\core\data\Data;
 use boolive\core\request\Request;
 use boolive\core\values\Rule;
 
-class part extends widget_autolist
+class view_part extends widget_autolist
 {
     function startRule()
     {

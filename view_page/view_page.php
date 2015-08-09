@@ -32,7 +32,8 @@ class view_page extends widget_autolist
         $cond = Data::unionCond($cond, [
             'from' => $request['REQUEST']['object'],
             'select' => 'properties',
-            'depth' => 1
+            'depth' => 1,
+            'key' => 'name'
         ]);
         return Data::find($cond);
     }

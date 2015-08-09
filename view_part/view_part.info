@@ -1,7 +1,7 @@
 {
     "proto": "/vendor/boolive/basic/widget_autolist",
     "logic": true,
-    "file": "part.tpl",
+    "file": "view_part.tpl",
     "properties": {
         "title": "Виджет раздела",
         "description": "Отображает список подчиненного содержимого",
